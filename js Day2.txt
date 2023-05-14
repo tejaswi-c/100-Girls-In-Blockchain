@@ -1,0 +1,92 @@
+-how to take input from user
+const prompt=require("prompt-sync")({sigint:true}); 
+var n = prompt("Enter number:");
+for(var i = 1; i<=n; i++){
+    console.log(i);
+}
+
+-Unary operators
+-console.log(+"200")
+-console.log(+false)
+-console.log(+"hello")
+
+-binary operators
+console.log(32+16)
+
+-ternary operators
+const score=80;
+const scorerating=score>50?"Good":"poor";
+console.log(scorerating)
+
+
+Strings
+-can be inside ''/ ""
+-string manipulation
+Ex:
+  var name="tej";
+  for(var i=0;i<name.length;i++){
+    console.log(name[i])
+  }
+  console.log(name[0])
+
+String interpolation
+
+const name = "tej";
+const message = `Hello, ${name}`;
+console.log(message);
+
+
+Escape character
+let name1="Hello\n tej";
+console.log(name1);
+
+
+
+slice
+var s1='tej';
+var s2=s1.slice(0,4);
+var s3=s1.slice(s2,2);
+console.log(s2);
+console.log(s3);
+console.log(s1.replace("te","ta"));
+
+functions
+-block of code  
+-reusable
+
+  function functionname([arg1,arg2,...argn]){
+    //statement
+  }
+  -cube
+      function cube(a){
+        return a*a*a;
+      }
+      console.log(cube(5));
+  -product
+      function product(a,b){
+        return a*b;
+      }
+      console.log(product(3,4));
+      var result=product.call(this,4,5)
+      console.log(result)
+    
+-arrow function 
+var my_function=(arg1,arg2,..argn)=>(expression)
+
+var greet=x=>console.log(x);
+greet('Hello')
+
+var product=(a,b)=>a*b;
+console.log(product(4,5));
+
+
+-Create a for loop that iterates up to 100
+ while outputting "fizz" at multiples of 3,
+ "buzz" at multiples of 5 and "fizzbuzz" at 
+multiples of 3 and 5 and priniting rest of 
+the numbers as it is use ternary operator
+
+for(let i = 1; i <= 100; i++){
+  const ans = (i%3 === 0 && i%5 === 0) ? "fizzbuzz" : (i%3 === 0 ? "fizz" : (i%5 === 0 ? "buzz" : i));
+  console.log(ans);
+}
