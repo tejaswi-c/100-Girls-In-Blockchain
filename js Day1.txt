@@ -1,0 +1,118 @@
+javascript
+-interpreted language
+-dynamic language-no need to specify datatypes
+-errors might be due to missing semicolon
+
+
+variables
+-let
+-var
+
+constants
+-const
+
+return statement
+-console.log()
+
+comments
+-//
+-/* */
+
+Datatypes
+-primitive
+ -Number
+ -String
+ -Boolean
+ -Null
+ -Undefined
+-non-primitive
+ -object
+ -symbol
+
+operators
+-Assignment    =
+-Arithmetic    +,-*,/,%,++,--
+-Comparision  ==,!=,>,<,>=,<=
+-Logical      &&,||,!
+-Conditional  ?
+
+if-else statement
+if(condition){
+	
+}
+else{
+	
+}
+
+switch(expression){
+	case value1: //statement
+	             break;
+	.
+	.
+	.
+	default:
+}
+
+Loops
+-for
+ for( var i=0;i<n;i++){
+   //statement
+ }
+-while
+ while(condition){
+  //body
+ }
+-dowhile
+ do{
+  //body 	
+ }while(condition)
+
+
+Questions
+1.FizzBuzz
+for (var i = 1; i <= 100; i++) {
+  if (i % 3 == 0 && i % 5 == 0) {
+    console.log("FizzBuzz");
+  } 
+  else if (i % 3 == 0) {
+    console.log("Fizz");
+  }
+  else if (i % 5 == 0) {
+    console.log("Buzz");
+  }
+  else {
+    console.log(i);
+  }
+}
+
+2.lefttraingle pattern
+for(var i=1;i<6;i++)
+{
+    var line="";
+   for(var j=1;j<i+1;j++){
+	  line+="*";
+	}
+    console.log(line);
+	
+}
+
+3.downward traingle
+for(var i=5;i>=1;i--){
+    s = ""
+    for(var j=1;j<=i;j++){
+        s = s + "*";
+    }
+    console.log(s);
+}
+
+4.pyramid
+for(var i=0;i<5;i++){
+    line=""
+    for(var j=1;j<5-i;j++){
+        line+=" ";
+    }
+    for(var k=0;k<2*i+1;k++){
+        line+="*";
+    }
+    console.log(line)
+}
