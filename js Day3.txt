@@ -1,0 +1,106 @@
+
+Assignment-Day2
+
+string methods
+var str="Hello,How are you?";
+var str1="Welcome";
+console.log(str.length); 
+console.log(str.charAt(0)); 
+console.log(str.substring(0, 5));
+console.log(str.slice(0, 5));
+console.log(str.toLowerCase());
+console.log(str.toUpperCase());
+console.log(str.replace("world", "there"));
+console.log(str.indexOf("world")); 
+console.log(str.concat(", ", str1));
+console.log(str.trim());
+
+
+Day-3
+ARRAY
+
+-declaration of array
+let arrayname=[value1,value2,value3,...];
+let arrayname=new Array();
+
+let num=[1,2,3,4,'hello']
+console.log(num);
+
+
+Array methods
+  let str=num.toString()
+  console.log(str)
+  console.log(typeof(str))
+  let c=num.join('/')
+  console.log(c);
+  let r=num.pop();
+  console.log(r)
+  console.log(num.length)
+
+
+  
+let num=[1,2,3,4,'hello']
+console.log(num);
+
+let str=num.toString()
+console.log(str)
+console.log(typeof(str))
+let c=num.join('/')
+console.log(c);
+let r=num.pop();
+console.log(r)
+console.log(num.length)
+
+
+const fruits=['banana','orange'];
+console.log(fruits);
+fruits.shift('banana')
+console.log(fruits)
+fruits.unshift()
+console.log(fruits)
+const vegetables=['tomato','onion']
+const eatables=fruits.concat(vegetables)
+console.log(eatables)
+fruits.splice(2,0,"Lemon",'kiwi');
+console.log(fruits)
+
+//delete fruits[0];
+fruits.sort()
+console.log(fruits)
+
+let arr = [1, 2, 3, 4, 5];
+arr.splice(2, 1); 
+console.log(arr);
+
+delete arr; 
+console.log(arr);
+
+let myArray = [1, 2, 3];
+myArray = null; 
+console.log(myArray);
+
+Date and time
+var today=new Date()
+console.log(today)
+
+
+
+Question
+Digitalclock that updates every 3 seconds
+
+function digital_clock(){
+  let today=new Date();
+  let hours=today.getHours();
+  let minutes=today.getMinutes();
+  let seconds=today.getSeconds();
+  if (hours>12){
+     hours=hours%12;
+  }
+  hours=(hours<10)? '0'+hours:hours;
+  minutes=(minutes<10)? '0'+minutes:minutes;
+  seconds=(seconds<10)? '0'+seconds:seconds;
+  console.log(hours+':'+minutes+':'+seconds);
+}
+setInterval(digital_clock,3000);
+
+
