@@ -1,21 +1,4 @@
 
-Assignment-Day2
-
-string methods
-var str="Hello,How are you?";
-var str1="Welcome";
-console.log(str.length); 
-console.log(str.charAt(0)); 
-console.log(str.substring(0, 5));
-console.log(str.slice(0, 5));
-console.log(str.toLowerCase());
-console.log(str.toUpperCase());
-console.log(str.replace("world", "there"));
-console.log(str.indexOf("world")); 
-console.log(str.concat(", ", str1));
-console.log(str.trim());
-
-
 Day-3
 ARRAY
 
@@ -84,8 +67,7 @@ var today=new Date()
 console.log(today)
 
 
-
-Question
+Assignment Day-3
 Digitalclock that updates every 3 seconds
 
 function digital_clock(){
