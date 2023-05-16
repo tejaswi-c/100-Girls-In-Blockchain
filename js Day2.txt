@@ -1,4 +1,25 @@
+
+Assignment-Day2
+
+string methods
+var str="Hello,How are you?";
+var str1="Welcome";
+console.log(str.length); 
+console.log(str.charAt(0)); 
+console.log(str.substring(0, 5));
+console.log(str.slice(0, 5));
+console.log(str.toLowerCase());
+console.log(str.toUpperCase());
+console.log(str.replace("world", "there"));
+console.log(str.indexOf("world")); 
+console.log(str.concat(", ", str1));
+console.log(str.trim());
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-user Inputs
 -how to take input from user
+
 const prompt=require("prompt-sync")({sigint:true}); 
 var n = prompt("Enter number:");
 for(var i = 1; i<=n; i++){
@@ -90,3 +111,7 @@ for(let i = 1; i <= 100; i++){
   const ans = (i%3 === 0 && i%5 === 0) ? "fizzbuzz" : (i%3 === 0 ? "fizz" : (i%5 === 0 ? "buzz" : i));
   console.log(ans);
 }
+
+
+
+
