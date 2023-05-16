@@ -1,4 +1,24 @@
 
+Assignment Day-3
+Digitalclock that updates every 3 seconds
+
+function digital_clock(){
+  let today=new Date();
+  let hours=today.getHours();
+  let minutes=today.getMinutes();
+  let seconds=today.getSeconds();
+  if (hours>12){
+     hours=hours%12;
+  }
+  hours=(hours<10)? '0'+hours:hours;
+  minutes=(minutes<10)? '0'+minutes:minutes;
+  seconds=(seconds<10)? '0'+seconds:seconds;
+  console.log(hours+':'+minutes+':'+seconds);
+}
+setInterval(digital_clock,3000);
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Day-3
 ARRAY
 
@@ -65,24 +85,4 @@ console.log(myArray);
 Date and time
 var today=new Date()
 console.log(today)
-
-
-Assignment Day-3
-Digitalclock that updates every 3 seconds
-
-function digital_clock(){
-  let today=new Date();
-  let hours=today.getHours();
-  let minutes=today.getMinutes();
-  let seconds=today.getSeconds();
-  if (hours>12){
-     hours=hours%12;
-  }
-  hours=(hours<10)? '0'+hours:hours;
-  minutes=(minutes<10)? '0'+minutes:minutes;
-  seconds=(seconds<10)? '0'+seconds:seconds;
-  console.log(hours+':'+minutes+':'+seconds);
-}
-setInterval(digital_clock,3000);
-
 
