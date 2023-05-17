@@ -1,0 +1,89 @@
+<html>
+<head>
+    <title>Calculator</title>
+    <style>
+        form {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 50px;
+            background-color: lightblue;
+            display: inline-block;
+            width: 200px;
+            height: 300px;
+        }
+        #cal input {
+            font-size: 24px;
+            padding: 5px;
+            width: 40px;
+            margin:1px;
+            
+        }
+    </style>
+    <script>
+        function clear_screen(){
+            document.form.display.value = "";
+        }
+        function on_screen(buttonValue) {
+            document.form.display.value += buttonValue;
+        }
+        function calculate(){
+            var result = document.form.display.value;
+            var operators = result.match(/[+\-*/]/g);
+            var numbers = result.split(/[+\-*/]/).map(Number);
+
+            var total = numbers[0];
+            for (var i = 0; i < operators.length; i++) {
+                var operator = operators[i];
+                var number = numbers[i + 1];
+
+                switch (operator) {
+                    case '+':
+                        total += number;
+                        break;
+                    case '-':
+                        total -= number;
+                        break;
+                    case '*':
+                        total *= number;
+                        break;
+                    case '/':
+                        total /= number;
+                        break;
+                }
+            }
+
+            document.form.display.value = total;
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <form name="form">
+            <h3>Calculator</h3>
+           
+                <input style="width:185px; height:30px;" "text" name="display" value="" /><br /></br>
+                <div id="cal">
+                <input type="button" value="1" onclick="on_screen('1')" />
+                <input type="button" value="2" onclick="on_screen('2')" />
+                <input type="button" value="3" onclick="on_screen('3')" />
+                <input type="button" value="+" onclick="on_screen('+')" /><br />
+
+                <input type="button" value="4" onclick="on_screen('4')" />
+                <input type="button" value="5" onclick="on_screen('5')" />
+                <input type="button" value="6" onclick="on_screen('6')" />
+                <input type="button" value="-" onclick="on_screen('-')" /><br />
+
+                <input type="button" value="7" onclick="on_screen('7')" />
+                <input type="button" value="8" onclick="on_screen('8')" />
+                <input type="button" value="9" onclick="on_screen('9')" />
+                <input type="button" value="*" onclick="on_screen('*')" /><br />
+
+                <input type="button" value="C" onclick="clear_screen()" />
+                <input type="button" value="0" onclick="on_screen('0')" />
+                <input type="button" value="=" onclick="calculate()" />
+                <input type="button" value="/" onclick="on_screen('/')" />
+            </div>
+        </form>
+    </center>
+</body>
+</html>
