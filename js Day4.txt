@@ -1,0 +1,120 @@
+Object 
+It is an instance of a class
+Class 
+It is a blueprint and it defines the properties of objects
+
+If the class is bulding-object of the this class can be 
+flat,rooms,restaurent etc...
+
+var person={firstName:'kajal',lastname:'agarwal',age:22,eyecolr:"black"};
+var person={firstName:'kajal',lastname:'agarwal',age:22,eyecolr:"black"};
+var person=new Object();
+person.firstName='kajal';
+person.lastname='agarwal';
+person.age=22;
+person.eyecolor='black';
+console.log(person)
+
+
+
+-x is not a copy of preson,it is a reference,points to person
+-objects are mutable
+-If anything is changed in the reference actual objects are changed
+
+const x=person;
+x.age=10;
+console.log(person)
+
+
+
+js for in loop
+-it is used to loop an object
+
+let txt="";
+for (let x in person){
+    txt+=person[x];
+}
+console.log(txt);
+
+this keyword is a pointer
+
+
+Events
+
+Example1:
+-onclick event
+
+<script type="text/javascript">
+  function msg(){
+      let message=prompt("Who you are?");
+      alert("I dont care whoever you are "+message);
+  }
+</script>
+
+<input type="button" value="click" onclick="msg()"/>
+
+Example2
+-onmouseover event
+
+<html>
+  <head>
+    <h1>javascript events</h1>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function mouse_over_event(){
+          alert("It is an intresting class");
+      }
+    </script>
+<p onmouseover="mouse_over_event()">Keep cursor over me</p>
+  </body>
+</html>
+
+
+OOPS CONCEPTS
+Encapsulation
+Polymorphism-
+Inheritance
+Abstraction-It hides the implementation details
+Class
+Object
+
+
+
+
+class sessionForm{
+    //constuctor example{
+        console.log("constuctor is called")
+    //}
+    submit(){
+        alert(this.name+":Your form is submitted for session:"+this.sessionname)
+    }
+    cancel(){
+        alert(this.name+":This form is cancelled for session:"+this.sessionname)
+    }
+    fill(givenname,sessionname){
+        this.name=givenname
+        this.sessionname=sessionname
+    }
+  }
+
+js Day4.js  
+  let display=new sessionForm()
+  display.fill("javascript","100_girls_in_blockchain")
+  
+  let form1=new sessionForm()
+  let form2=new sessionForm()
+  form1.fill("solidity")
+  form2.fill("100_girls_in_blockchain")
+  form1.submit()
+  form2.submit()
+  form1.cancel()
+
+
+<html>
+  <head>
+    <h1>javascript events</h1>
+  </head>
+  <body>
+    Welcome!!!
+    <script src="js Day4.js"></script>
