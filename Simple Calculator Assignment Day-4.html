@@ -27,24 +27,11 @@
             document.form.display.value += buttonValue;
         }
         function calculate(){
-            var result = document.form.display.value;
-            var operators = result.match(/[+\-*/]/g);
-            var numbers = result.split(/[+\-*/]/).map(Number);
-
-            var total = numbers[0];
-            for (var i = 0; i < operators.length; i++) {
-                var operator = operators[i];
-                var number = numbers[i + 1];
-
-                switch (operator) {
-                    case '+':total += number;break;
-                    case '-': total -= number;break;
-                    case '*':total *= number;break;
-                    case '/':total /= number;break;
-                }
-            }
-
-            document.form.display.value = total;
+            //if the value are large ,there is need to handle,the result will be Infinity
+            //For a number Divide by 0,result is infinity
+            var expression = document.form.display.value;
+            var result = eval(expression);
+            document.form.display.value = result;
         }
     </script>
 </head>
