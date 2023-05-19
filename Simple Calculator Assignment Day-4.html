@@ -26,13 +26,28 @@
         function on_screen(buttonValue) {
             document.form.display.value += buttonValue;
         }
-        function calculate(){
-            //if the value are large ,there is need to handle,the result will be Infinity
-            //For a number Divide by 0,result is infinity
+       function calculate() {
             var expression = document.form.display.value;
-            var result = eval(expression);
-            document.form.display.value = result;
-        }
+            try {
+                 var result = eval(expression);
+                 //If the expression is 2**3 ,the result will be 2(powerof(3)) 2^3=8
+                 //If the result is not a number or for large values the result is displayed as Error
+                 if (isNaN(result) || !isFinite(result)) {
+                   document.form.display.value = "Error";
+                 } else {
+                   document.form.display.value = result;
+                 }
+           } 
+           catch (error) {
+                 //the expression like 4*/+5 are handled by syntax error
+                 if (error instanceof SyntaxError) {
+                   document.form.display.value = "Invalid syntax";
+                 } else {
+                    document.form.display.value = "Error";
+                 }
+           }
+      }
+
     </script>
 </head>
 <body>
