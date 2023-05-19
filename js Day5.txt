@@ -1,0 +1,121 @@
+Prototype
+
+prototype is an reference to an object or null
+let a = {
+    name: "Tej",
+    language: "python",
+    greet: function() {
+        console.log("self taught");
+    }
+};
+
+let p = {
+    run: function() {
+        console.log("still learning!!!");
+    }
+};
+
+a.__proto__ = {
+    name: "hello"
+};
+
+a.__proto__ = p;
+a.run();
+console.log(a.name);
+
+
+
+Inheritance
+
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+    
+    walk() {
+        console.log("I'm walking");
+    }
+    
+    run() {
+        console.log("I'm running");
+    }
+}
+
+class Monkey extends Animal {
+   
+    climb() {
+        console.log("I'm climbing");
+    }
+}
+
+
+const monkey = new Monkey("George");
+
+monkey.walk();  // Output: I'm walking
+monkey.run();   // Output: I'm running
+
+monkey.climb(); // Output: I'm climbing
+
+
+
+<!-----------------DOM------------------->
+
+Example1:
+
+document object-getElementsById
+
+
+<script type="text/javascript">
+function getcube(){
+    let cubenumber=document.getElementById("cubenumber").value;
+    alert(cubenumber*cubenumber*cubenumber)
+}
+</script>
+<form>
+Enter no:
+<input type="text" id="cubenumber" name="cubenumber"/><br>
+<input type="button" value="cube" onclick="getcube()"/>
+</form>
+
+
+
+Example2:
+
+Document object-getElementsByName
+<script type="text/javascript">
+  function totalelements() {
+    var allgenders = document.getElementsByName("gender");
+    alert("Total genders: " + allgenders.length);
+  }
+</script>
+
+<form>
+  Male: <input type="radio" name="gender" value="male">
+  Female: <input type="radio" name="gender" value="female">
+  Others: <input type="radio" name="gender" value="others">
+  <input type="button" value="Enter" onclick="totalelements()">
+</form>
+
+
+
+Example3:
+<script>
+   function validateform(){
+    var name=document.myform.name.value;
+    var password=document.myform.password.value;
+    if(name==null||name==""){
+        alert("Name can't be balnk");
+        return false;
+    }
+    else if(password.length<6){
+        alert("Password must be atleast 6 characters long");
+        return false;
+    }
+   }
+</script>
+<body>
+<form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()">
+Name:<input type="text" name="name"></br>
+Password:<input type="password" name="password"><br>
+<input type="submit" value="register">
+</form>
