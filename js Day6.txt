@@ -1,0 +1,79 @@
+Day-5
+
+Callbacks
+-helps to develop asynchronous javascript code.
+-anonymous function
+-can be written with arrow function
+-the arguments that is passed are another function
+
+
+Example-1
+console.log("Let us start the session")
+setTimeout(function(){
+    console.log("class is very intresting")
+},5000)
+console.log("continue the session")
+
+Output:
+Let us start the session
+continue the session
+class is very intresting
+
+
+Example-2
+const myPromise = new Promise((resolve, reject) => {    
+  let condition= 10;    
+    
+  if(condition<0) {      
+      resolve('Promise is resolved successfully and then() menthod will be called');    
+  } else {      
+      reject('Promise is rejected and catch() medhod will be called');    
+  }  
+});  
+  
+myPromise.then((message) => {   
+  console.log(message);  
+}).catch((message) => {   
+  console.log(message);  
+});  
+
+output:
+Promise is rejected and catch() medhod will be called
+
+
+async: The async keyword is used to define an asynchronous function.
+-An asynchronous function returns a Promise implicitly. 
+-It allows you to use the await keyword within the function to wait for Promises to resolve or reject before proceeding further.
+
+await: The await keyword can only be used inside an async function.
+-It pauses the execution of the function until the awaited Promise is resolved or rejected.
+-It allows you to write asynchronous code in a more sequential and synchronous style.
+
+-await can only be used within an async function,
+ and it can only be used with Promises or other objects that implement the Promise-like interface.
+
+async function example() {
+  function resolveAfterDelay(delay) {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve('Resolved after ' + delay + ' milliseconds');
+      }, delay);
+    });
+  }
+
+  const res = await resolveAfterDelay(3000);
+  console.log(res);
+}
+
+example();
+
+Promise:
+A Promise is an object in JavaScript that represents the eventual 
+completion or failure of an asynchronous operation and its resulting
+value. It is a way to handle asynchronous operations in a more structured
+and manageable manner.
+Promises have three states:
+
+Pending: The initial state when the Promise is created, and the asynchronous operation is still in progress.
+Fulfilled: The state when the asynchronous operation is successfully completed, and the Promise is resolved with a value.
+Rejected: The state when the asynchronous operation encounters an error or fails, and the Promise is rejected with a reason or error message.
