@@ -1,0 +1,41 @@
+Blockchain:
+-it is a decentralized system
+-it consists of blocks that are linked together.
+-the blocks cannot be removed.
+
+Smartcontracts:
+-smart contracts are nothing but a code that run automatically when specific conditions are met
+
+Miners:
+Miners are specific types of nodes that participate in 
+the process of adding new blocks to the blockchain. 
+In blockchain networks that use a proof-of-work consensus 
+algorithm, miners compete to solve complex mathematical
+puzzles to validate transactions and create new blocks.
+
+Nonce:
+Nonce stands for "number used once.
+-Nonces are often used to introduce an element of 
+ randomness in cryptographic algorithms or protocols. 
+-For example, in key exchange protocols like Diffie-Hellman, 
+ nonces are used to generate random secret values that help 
+ ensure secure key generation and prevent replay attacks.
+
+web1:
+It is static/read-only,there is no interactivity.
+web2:
+It is read-write web,there is lot of interactivity
+web3:
+It is a decentralized web,semantic web.
+
+NFT:
+NFT stands for "non-fungible token," which is a type
+of digital asset that represents ownership or proof 
+of authenticity of a unique item or piece of content.
+Unlike cryptocurrencies like Bitcoin or Ethereum, 
+which are fungible and can be exchanged on a one-to
+-one basis, NFTs are distinct and cannot be exchanged
+on an equal basis.
+
+DApps:
+DApps, short for decentralized applications, are software applications built on top of blockchain platforms.
