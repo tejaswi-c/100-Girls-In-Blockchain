@@ -68,4 +68,19 @@ Decentralized Finance (DeFi):
    DeFi aims to provide decentralized alternatives to traditional financial intermediaries, offering services such as lending, borrowing, trading, and yield farming.
    DeFi protocols often use smart contracts to automate and enforce financial transactions and agreements without the need for intermediaries.
    
+ERC-20:
+    ERC-20 is a widely adopted token standard on the Ethereum blockchain. 
+    It defines a set of rules and standards that a token contract must follow to be considered ERC-20 compliant. 
+    ERC-20 tokens are fungible, which means that each token is mutually interchangeable with any other token of the same type
+
+Coins: 
+Coins are native cryptocurrencies that operate on their own independent blockchain.
+Examples of coins include Bitcoin (BTC), Ethereum (ETH), and Litecoin (LTC).
+Coins typically serve as a form of digital currency and have their own network and blockchain infrastructure.
+
+Tokens:
+Tokens, on the other hand, are digital assets that are built on existing blockchain platforms, such as Ethereum or Binance Smart Chain. 
+Tokens are created and operate using smart contracts, which are programmable contracts on the blockchain.
+Tokens can represent various things, including utility within a specific application, assets, or even ownership in a company.
   
+ All coins are tokens,all tokens are not coins
