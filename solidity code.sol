@@ -1,34 +1,34 @@
 code1:
-pragma solidity ^0.8.17;
+     pragma solidity ^0.8.17;
 
-contract Helloworld{
-     string public greet+"Hello world!";
- }
+     contract Helloworld{
+          string public greet+"Hello world!";
+      }
  
  counter App:
- pragma solidity ^0.8.17;
- contract Counter{
-       uint public count;
-       function get() public view return (uint){
-            return count;
-       }
-       function inc() public{
-            count+=1;
-        }
-        function dec() public{
-            count-=1;
-        }
-}
+      pragma solidity ^0.8.17;
+      contract Counter{
+            uint public count;
+            function get() public view return (uint){
+                 return count;
+            }
+            function inc() public{
+                 count+=1;
+             }
+             function dec() public{
+                 count-=1;
+             }
+     }
 
 
-Primitive datatypes
--boolean
--uint256=uint
--int256=int
--address
+2.Primitive datatypes
+     -boolean
+     -uint256=uint
+     -int256=int
+     -address
 
-pragma solidity ^0.8.17;
-contract Primitives{
+  pragma solidity ^0.8.17;
+  contract Primitives{
         bool public too=true;
 
         unit8 public u8=1;
@@ -51,7 +51,7 @@ contract Primitives{
    }
   
   
-  Variables
+ 3.Variables
   -3 types 
      -local-declared inside a function,not stored on blockchain
      -state-declared outside a function,stored on blockchain
@@ -72,3 +72,26 @@ contract Primitives{
          address sender=msg.sender;//address of caller
          }
      }
+
+
+4.Constants
+     Their value is hard coded and using constants can save gas cost.
+     pragma solidity ^0.8.17;
+     contract constants{
+         address public constant my_addr=0x77777bgmjueduj7287YHVHYJF386nc;
+         unit public constant my_uint=123;
+     }
+    
+    
+5.Immutable
+     Immutable variables are like constants. 
+     Values of immutable variables can be set inside the constructor but cannot be modified afterwards.
+     pragma solidity ^0.8.17;
+     contract Immutable{
+              address public immutable my_addr;
+              address public immutable my_uint;
+              constructor(uint myuint){
+                  my_addr=msg.sender;
+                  my_uint=myuint;
+               }
+      }
