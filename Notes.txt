@@ -1,0 +1,49 @@
+cryptograpy:
+Cryptography is the practice of securing communication and information by converting it into a form that is unintelligible to unauthorized individuals.
+It involves techniques and methods for encryption, decryption, and various cryptographic protocols to ensure confidentiality, integrity, authentication, and non-repudiation of data.
+
+Ex: 
+1.ceaser-cypher
+  It is encoding and decoding technique with a shift number,where the positions of characters in the plaintext message are rearranged to form the ciphertext
+2.columnar transposition cipher
+  The rearrangement is done by writing the plaintext message in a grid or matrix, and then reading the columns of the grid in a specific order to obtain the ciphertext.
+3.Enigma Machine
+  The Enigma machine is an electromechanical encryption device that was widely used by various military and government organizations, particularly in Germany, during World War II. 
+  It was designed to provide secure communication by encrypting and decrypting messages.It is a mapping of alphabets.
+
+4.End-to-end encryption:
+  End-to-end encryption (E2EE) is a method of secure communication that ensures the confidentiality and integrity of data exchanged between two parties.
+  It is designed to prevent unauthorized access to the content of messages or any intermediary, including service providers, from being able to decrypt or view the information.
+  security key is stored on the users device itself.
+5.Symmetric encryption:
+  It uses same key to encrypt and decrypt messages.
+6.Asymmetric encryption:
+  It uses different keys for encryption and decryption.
+7.public-key crytograpy
+  -two keys: private and public,It is easy to get from private key to public key,but hard to get to private from public key.
+  use cases
+  1: send a message
+  2: prove ownership
+  Tranasport layer security
+  
+  
+  Cryptography in Bitcoin 
+      -not encrypted
+      -digital signatures
+      -cryptographic hashes
+ 
+ 
+ ECDSA
+ Hashing:
+ It has important proprties,so used in bitcoin
+ If anything changes the whole output changes.
+ 
+ Cryptocurreny mining:
+ Cryptocurrency mining is the process by which new cryptocurrency coins are created and transactions are verified and added to the blockchain public ledger.
+ It involves using computational power to solve complex mathematical problems that validate and secure the cryptocurrency network.
+ 
+ 
+ 
+  
+  
+  
