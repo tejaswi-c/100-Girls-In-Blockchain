@@ -96,3 +96,142 @@ code1:
                   my_uint=myuint;
                }
       }
+
+
+
+
+
+
+Day-2
+
+6.Reading and writing to a state variable
+    -To write or update a state variable you need to send a transaction.
+    -you can read state variables, for free, without any transaction fee.
+    
+     pragma solidity ^0.8.17;
+     contract simplestorage{
+          unit public num;
+          function set(unit _num) public {
+               num=_num
+          }
+          function get() public view returns (unit){
+               return num;
+           }
+      }
+      
+      
+7.Ether and wei
+     -transactions are paid with ether
+     -1 ether=10**18 wei
+     
+     pragma solidity ^0.8.17;
+     contarct EtherUnits{
+          uint public onewei=1 wei;
+          bool public isOnewei=1 wei==1;
+          
+          unit public oneether=1ether;
+          bool public isoneether=1ether=1e18;
+     }
+
+
+8.Gas
+      How much ether do you need to pay for a transsaction?
+      =gas spent*gas price amount of ether
+      -gas is a unit of computation
+      -gas spent is the total amount of gas used in transaction
+      -gas price is how much ether you are willing to pay per gas
+
+      -transactions with higher gas prices have higher priorirty to be included in a block
+      -unspent gas will be refunded
+
+      Gas limit
+      There are two upper bounds to the amount of gas you can spend
+      -gas limit(set by you)
+      -block gas limit(set by network)
+
+
+     pragma solidity ^0.8.17;
+     contract Gas{
+          uint public i=0;
+          function forever() public{
+          //all the gas are spent in a tranasaction
+               while(true){
+                    i+=1;
+              }
+         }
+     }
+     
+     
+9.if,else if,else
+     
+     pragma solidity ^0.8.17;
+     contract ifelse{
+          function foo(uint x) public pure returns (uint){
+               if(x<10){
+                    return 0;
+               }
+               else if(x<20){
+                    return 1;
+               }
+               else{
+                    return 2;
+               }
+          }
+          function ternary(uint _x) public pure returns (uint){
+               return x<10?1:2;
+            }
+     }
+     
+
+10.For,while,dowhile
+     -If we write loops that are unbounded, this can hit the gas limit, causing your transaction to fail.
+     -while and do while loops are rarely used
+     pragma solidity ^0.8.17;
+     contract loop{
+          function loop() public{
+               //for loop
+               for(uint i=0;i,10;i++){
+                    if(i==3){
+                         continue;
+                    }
+                    if(i==5){
+                         break;
+                    }
+                }
+                unit j;
+                while(j<10){
+                    j++;
+               }
+            }
+         }
+    
+           
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
