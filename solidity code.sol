@@ -110,7 +110,7 @@ Day-2
     
      pragma solidity ^0.8.17;
      contract simplestorage{
-          unit public num;
+          uint public num;
           function set(unit _num) public {
                num=_num
           }
@@ -178,7 +178,7 @@ Day-2
                }
           }
           function ternary(uint _x) public pure returns (uint){
-               return x<10?1:2;
+               return x_<10?1:2;
             }
      }
      
