@@ -204,8 +204,14 @@ Day-2
                }
             }
          }
-    
+   
+   
+   
+   
+   
  Day-3
+ 
+ 
  11.Maps
      Maps are created with the syntax mapping(keytype=>valuetype)
      keytype-type,bytes,string,or any contract
@@ -238,6 +244,7 @@ Day-2
                delete nested[add][i];
           }
     }
+    
     
 
 12.Arrays
