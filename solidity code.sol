@@ -205,9 +205,130 @@ Day-2
             }
          }
     
-           
+ Day-3
+ 11.Maps
+     Maps are created with the syntax mapping(keytype=>valuetype)
+     keytype-type,bytes,string,or any contract
+     valuetype-any type including mapping or an array
      
+     contract Mapping{
+          mapping(address=>uint) public mymap;
+          function get(address add) public view returns (uint){
+               return mymap[add];
+          }
+          function set(address add,uint i) public{
+               mymap[add]=i;
+          }
+          function remove(add add) public{
+               delete mymap[add];
+          }
+     }
+  
+     Nested mapping
+     
+     contract nestedmapping{
+          mapping(address=>mapping(uint=>bool)) public nested;
+          function get(address add,uint i) public view returns (bool){
+               return nested[add][i];
+          }
+          function set(address add,uint i,bool boo) public{
+               nested[add][i]=boo;
+          }
+          function remove(address add,uint i) public{
+               delete nested[add][i];
+          }
+    }
+    
 
+12.Arrays
+     Array can have a compile-time fixed size or a dynamic size.
+     pragma solidity ^0.8.17;
+     contract array{
+          uint[] public arr;
+          uint[] public arr1=[1,2,3];
+          uint[10] public myarr;
+          function get(uint i) public view (uint){
+               return arr[i];
+          }
+          function getarr()  public view return (uint[] memory){
+               return arr;
+          }
+          function push(uint i) public{
+               arr.push(i);
+          }
+          function pop(uint i)public{
+               arr.push(i);
+          }
+          function getlength() public view returns (uint){
+               return arr.length;
+          }
+          function remove(uint index) public{
+               delete arr[index];
+          }
+          function example() external{
+               uint[] memory a=new uint[](5);
+          }
+     }
+     
+     Remove array element by shifting elements from right to left
+
+     pragma solidity 0.8.17;
+     contract ArrayRemoveByShifting{
+          uint[] public arr;
+          function  remove(uint index) public{
+               require(index<arr.length,"index out of bound");
+               for(uint i=index;i<arr.length-1;i++){
+                    arr[i]=arr[i+1];
+                }
+                arr[i]=arr[i+1];
+           }
+           arr.pop();
+       }
+       function test() external{
+          arr=[1,2,3,4,5]
+          remove(2);
+          assert(arr[0]==1);
+          assert(arr[1]==2);
+          assert(arr[2]==4);
+          assert(arr[3]==5);
+          arr=[1];
+          remove(0);
+          assert(arr.length==0);
+          }
+       }
+       
+      Remove array element by copying last element into to the place to remove
+
+      pragma solidity ^0.8.17;
+      contract arrayreplacefound{
+          uint[] public arr;
+          function remove(uint index) public{
+               for(uint i=index;i<arr.length-1;i++){
+                    arr[index]=arr[arr.length-1];
+               }
+               arr.pop();
+           }
+           function test() public{
+               arr=[1,2,3,4];
+               remove(1);
+               assert(arr.length==3);
+               assert(arr[0]==1);
+               assert(arr[2]==2);
+               assert(arr[2]=3);
+                
+               remove(2);
+               assert(arr.length==2);
+               assert(arr[0]==1);
+               assert(arr[1]==4);
+          }
+   }
+              
+           
+  
+  
+          
+             
+     
 
 
 
