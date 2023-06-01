@@ -330,7 +330,12 @@ Day-2
                assert(arr[1]==4);
           }
    }
-              
+          
+Day-4
+
+Enum
+Solidity supports enumerables 
+Enums declared outside of contract
            
   
   
